@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.deafwake.Setting">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#ffffff"
+        android:elevation="@dimen/pad_3dp">
+
+        <TextView
+            android:id="@+id/txt_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/pad_10dp"
+            android:padding="@dimen/pad_10dp"
+            android:text="Back"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/txt_16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:padding="@dimen/pad_10dp"
+            android:text="Preferences"
+            android:textColor="#000000"
+            android:textSize="@dimen/txt_16sp" />
+
+        <TextView
+            android:id="@+id/txt_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/pad_10dp"
+            android:padding="@dimen/pad_10dp"
+            android:text="Save"
+            android:textColor="@color/orange"
+            android:textSize="@dimen/txt_16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pad_10dp"
+        android:text="Alert Settings"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pad_10dp"
+        android:text="@string/alert" />
+    <!-- <LinearLayout
+         android:weightSum="1"
+         android:layout_width="match_parent"
+         android:padding="@dimen/pad_10dp"
+         android:layout_height="wrap_content">
+         <ImageView
+             android:layout_gravity="center_vertical"
+             android:layout_width="wrap_content"
+
+             android:layout_height="wrap_content"
+             android:background="@drawable/ic_flash"
+             android:backgroundTint="@color/orange"/>
+         <TextView
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+            android:layout_weight="1"
+             android:padding="@dimen/pad_10dp"
+             android:text="@string/led"
+             />
+         <Switch
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content" />
+     </LinearLayout>-->
+    <Switch
+        android:id="@+id/switch_flash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:drawableLeft="@drawable/ic_flash"
+        android:drawablePadding="@dimen/pad_10dp"
+        android:padding="@dimen/pad_10dp"
+        android:switchPadding="@dimen/pad_10dp"
+        android:text="@string/led" />
+
+    <Switch
+        android:id="@+id/switch_vib"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:drawableLeft="@drawable/ic_vib"
+        android:drawablePadding="@dimen/pad_10dp"
+        android:padding="@dimen/pad_10dp"
+        android:switchPadding="@dimen/pad_10dp"
+        android:text="@string/vib" />
+
+    <Switch
+        android:id="@+id/switch_screen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:drawableLeft="@drawable/ic_bulb"
+        android:drawablePadding="@dimen/pad_10dp"
+        android:padding="@dimen/pad_10dp"
+        android:switchPadding="@dimen/pad_10dp"
+        android:text="@string/screen" />
+
+    <Switch
+        android:id="@+id/switch_sound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:drawableLeft="@drawable/wave"
+        android:drawablePadding="@dimen/pad_10dp"
+        android:padding="@dimen/pad_10dp"
+        android:switchPadding="@dimen/pad_10dp"
+        android:text="@string/sound" />
+    <TextView
+        android:id="@+id/txt_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/pad_10dp"
+        android:layout_marginLeft="@dimen/pad_15dp"
+        android:layout_marginRight="@dimen/pad_15dp"
+        android:background="@drawable/textview_red"
+        android:gravity="center"
+        android:padding="@dimen/pad_10dp"
+        android:text="Alarm Preview"
+        android:textColor="@color/white" />
+</LinearLayout>

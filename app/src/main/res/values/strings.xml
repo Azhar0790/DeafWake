@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DeafWake</string>
+    <string name="alert">Choose your alert settings. Click the bar/panel for further setting if required</string>
+    <string name="led">LED Flash\nThe rear LED flashlight will flash on/off when the alarm is active.</string>
+    <string name="vib">Vibration\nVibration alerts will be repeated when the alarm is active if this option is enabled</string>
+    <string name="screen">Screen Flash\nThe screen will change between a series of bright and saturated colours to help you wake up.</string>
+    <string name="sound">Sound\nThis option is for the non-deaf, heavy sleepers. A repeating sound will be played when active.</string>
+</resources>

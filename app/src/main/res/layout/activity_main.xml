@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context="com.deafwake.MainActivity">
+
+    <ImageView
+        android:id="@+id/img_setting"
+        android:layout_width="@dimen/pad_25dp"
+        android:layout_height="@dimen/pad_25dp"
+        android:layout_margin="@dimen/pad_30dp"
+        android:src="@drawable/ic_setting" />
+
+    <ImageView
+        android:id="@+id/img_add_alarm"
+        android:layout_width="@dimen/pad_25dp"
+        android:layout_height="@dimen/pad_25dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/pad_30dp"
+        android:src="@drawable/ic_add_white_24dp" />
+    <AnalogClock
+        android:id="@+id/analog_clock"
+        android:layout_below="@id/img_setting"
+       android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hand_minute="@drawable/hand_minute"
+        android:hand_hour="@drawable/hand_hour"
+        android:layout_marginBottom="16dp"
+        android:dial="@drawable/clock_dial"
+        android:layout_marginTop="16dp" />
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fri 28 April 2017 16:00"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:layout_below="@id/analog_clock"
+        android:layout_centerHorizontal="true"/>
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/pad_15dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_alarms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="5 Alarms Active"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/txt_25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_date"
+                android:alpha=".8"
+                android:text="Tap the + icon to create new alarm "
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/txt_16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/pad_5dp"
+            android:src="@drawable/ic_help_white_24dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll_info"
+        android:layout_margin="@dimen/pad_7dp"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha=".3"
+            android:background="#ffffff" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/pad_20dp"
+            android:layout_marginLeft="@dimen/pad_5dp"
+            android:layout_marginRight="@dimen/pad_20dp"
+
+            android:layout_marginTop="@dimen/pad_5dp"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_current_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_add_alarm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/txt_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:alpha=".8"
+                android:text="28/03/2017"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/txt_18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txt_am"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:alpha=".8"
+                android:text="am"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/txt_18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextClock
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_date"
+            android:format12Hour="hh:mm"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/txt_60sp" />
+
+        <TextView
+            android:id="@+id/txt_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_time"
+            android:layout_gravity="right"
+            android:layout_marginLeft="@dimen/pad_50dp"
+            android:layout_toRightOf="@+id/txt_date"
+            android:alpha=".8"
+            android:text="Tuesday"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/txt_20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <Chronometer
+        android:id="@+id/chrome"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</RelativeLayout>

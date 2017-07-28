@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_alarm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/purple"
+    tools:context="com.deafwake.AddAlarm">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#ffffff"
+            android:elevation="@dimen/pad_3dp">
+
+            <TextView
+                android:id="@+id/txt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/pad_10dp"
+                android:padding="@dimen/pad_10dp"
+                android:text="Back"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/txt_16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:padding="@dimen/pad_10dp"
+                android:text="New Alarm"
+                android:textColor="#000000"
+                android:textSize="@dimen/txt_16sp" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_3dp"
+            android:background="@drawable/gradient_txt_view"
+            android:paddingBottom="@dimen/pad_10dp"
+            android:paddingLeft="@dimen/pad_20dp"
+            android:paddingTop="@dimen/pad_10dp"
+            android:text="What time would you like your alarm?"
+            android:textColor="#000000"
+            android:textSize="@dimen/txt_12sp" />
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_1dp"
+            android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+            android:format12Hour="HH:mm a"
+            android:gravity="center"
+            android:paddingBottom="@dimen/pad_10dp"
+            android:paddingLeft="@dimen/pad_20dp"
+            android:paddingRight="@dimen/pad_10dp"
+            android:paddingTop="@dimen/pad_10dp"
+            android:textColor="#000000"
+            android:textSize="@dimen/txt_25sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/pad_1dp"
+            android:background="@drawable/gradient_txt_view"
+            android:paddingBottom="@dimen/pad_10dp"
+            android:paddingLeft="@dimen/pad_20dp"
+            android:paddingTop="@dimen/pad_10dp"
+            android:text="How Frequent?"
+            android:textColor="#000000"
+            android:textSize="@dimen/txt_12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pad_10dp"
+            android:orientation="horizontal"
+            android:weightSum="7">
+
+            <TextView
+                android:id="@+id/txt_mon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/pad_10dp"
+                android:paddingLeft="@dimen/pad_5dp"
+                android:paddingRight="@dimen/pad_5dp"
+                android:paddingTop="@dimen/pad_10dp"
+                android:tag="0"
+                android:text="Mon"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_tue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/pad_10dp"
+                android:paddingLeft="@dimen/pad_5dp"
+                android:paddingRight="@dimen/pad_5dp"
+                android:paddingTop="@dimen/pad_10dp"
+                android:tag="0"
+                android:text="Tue"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_wed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/pad_10dp"
+                android:paddingLeft="@dimen/pad_5dp"
+                android:paddingRight="@dimen/pad_5dp"
+                android:paddingTop="@dimen/pad_10dp"
+                android:tag="0"
+                android:text="Wed"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_thu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/pad_10dp"
+                android:paddingLeft="@dimen/pad_5dp"
+                android:paddingRight="@dimen/pad_5dp"
+                android:paddingTop="@dimen/pad_10dp"
+                android:tag="0"
+                android:text="Thu"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_fri"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/pad_10dp"
+                android:paddingLeft="@dimen/pad_5dp"
+                android:paddingRight="@dimen/pad_5dp"
+                android:paddingTop="@dimen/pad_10dp"
+                android:tag="0"
+                android:text="Fri"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_sat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/pad_10dp"
+                android:paddingLeft="@dimen/pad_5dp"
+                android:paddingRight="@dimen/pad_5dp"
+                android:paddingTop="@dimen/pad_10dp"
+                android:tag="0"
+                android:text="Sat"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_sun"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/pad_5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="@dimen/pad_10dp"
+                android:paddingLeft="@dimen/pad_5dp"
+                android:paddingRight="@dimen/pad_5dp"
+                android:paddingTop="@dimen/pad_10dp"
+                android:tag="0"
+                android:text="Sun"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/pad_10dp"
+
+            android:text="Alarm Description (Shows on alarm activation)"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/et_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/pad_15dp"
+            android:background="@drawable/edittext_white"
+            android:hint="Description"
+            android:imeOptions="actionDone"
+            android:padding="@dimen/pad_5dp"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/txt_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/pad_15dp"
+            android:layout_marginRight="@dimen/pad_15dp"
+            android:background="@drawable/textview_red"
+            android:gravity="center"
+            android:padding="@dimen/pad_10dp"
+            android:text="Delete Alarm"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/update_alarm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/btn_bg"
+        android:gravity="center"
+        android:padding="@dimen/pad_15dp"
+        android:text="Update Alarm"
+        android:textColor="@color/white" />
+</RelativeLayout>

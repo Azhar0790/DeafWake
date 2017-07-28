@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_alarm_activated"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:keepScreenOn="true"
+    tools:context="com.deafwake.AlarmActivated">
+    <LinearLayout
+        android:layout_marginTop="@dimen/pad_100dp"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_am"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="PM"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/txt_25sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="06:30"
+            android:layout_marginRight="@dimen/pad_35dp"
+            android:layout_marginLeft="@dimen/pad_35dp"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/txt_60sp" />
+
+        <TextView
+            android:id="@+id/txt_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:layout_marginLeft="@dimen/pad_35dp"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/txt_16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pad_10dp">
+
+        <com.deafwake.custom.SlideButton
+            android:id="@+id/slide_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/trans_black"
+            android:clickable="false"
+            android:max="100"
+            android:layout_margin="@dimen/pad_5dp"
+            android:progressDrawable="@android:color/transparent"
+            android:thumb="@drawable/ic_thumb" />
+        <TextView
+            android:id="@+id/txt_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:layout_margin="@dimen/pad_5dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/txt_16sp"
+            android:padding="@dimen/pad_10dp"
+            android:layout_gravity="end|center_vertical"
+            />
+    </FrameLayout>
+</RelativeLayout>
